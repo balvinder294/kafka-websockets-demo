@@ -8,6 +8,8 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - SPRING_DATA_CASSANDRA_CONTACTPOINTS=kafkademo-cassandra
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
     ports:
       - 8080:8080
   kafkademo-cassandra:
@@ -24,3 +26,14 @@ services:
       service: kafkademo-cassandra-migration
     environment:
       - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
+  kafka:
+    extends:
+      file: kafka.yml
+      service: kafka
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+  zookeeper:
+    extends:
+      file: kafka.yml
+      service: zookeeper

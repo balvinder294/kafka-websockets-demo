@@ -23,6 +23,8 @@ spring:
       protocolVersion: V4
       compression: NONE
       keyspaceName: cassandra_unit_keyspace
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
   mail:
     host: localhost
   main:
@@ -75,7 +77,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: Yzk1YjFmOTNkODhhMTQwNmNiM2FlYWI3MDRiZWFjNmQ0MDU4MTI4NWM4ZTFjNDRjNDFhNWUxOGJjZDNhZDE1ZTE1M2MzODdhNmVmMzcyMGExODEyMGI4ZGI2MmQ3YmIxZWU3N2RmZTAwMDA2MzkxZmJmMTMzMjYyMWMzMDYxNGM=
+        base64-secret: ODZmMmUxZTVlYmY1NGY1YTZiOGIzZWM1Y2M4YTc2OGM4YzM1ZTVjMjkwYjI1OWJkYzM5YTI0ZmU3MjRlMWJlNDZmY2JlMGUxM2MxMjZhZTk1Nzc3NGZhOGM2NmYwZjgwNjlkMDIzNGRjMzI0N2QxMmEwN2FiNjhjODQxMWJjZjM=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

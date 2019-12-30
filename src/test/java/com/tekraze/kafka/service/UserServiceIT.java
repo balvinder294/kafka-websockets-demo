@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.kafka.test.context.EmbeddedKafka;
 
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for {@link UserService}.
  */
+@EmbeddedKafka
 @SpringBootTest(classes = KafkaDemoApp.class)
 public class UserServiceIT extends AbstractCassandraTest {
 

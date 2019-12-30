@@ -31,6 +31,17 @@ spring:
       enabled: false
     livereload:
       enabled: false
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
   data:
     cassandra:
       contactPoints: localhost
@@ -89,7 +100,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: Yzk1YjFmOTNkODhhMTQwNmNiM2FlYWI3MDRiZWFjNmQ0MDU4MTI4NWM4ZTFjNDRjNDFhNWUxOGJjZDNhZDE1ZTE1M2MzODdhNmVmMzcyMGExODEyMGI4ZGI2MmQ3YmIxZWU3N2RmZTAwMDA2MzkxZmJmMTMzMjYyMWMzMDYxNGM=
+        base64-secret: ODZmMmUxZTVlYmY1NGY1YTZiOGIzZWM1Y2M4YTc2OGM4YzM1ZTVjMjkwYjI1OWJkYzM5YTI0ZmU3MjRlMWJlNDZmY2JlMGUxM2MxMjZhZTk1Nzc3NGZhOGM2NmYwZjgwNjlkMDIzNGRjMzI0N2QxMmEwN2FiNjhjODQxMWJjZjM=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

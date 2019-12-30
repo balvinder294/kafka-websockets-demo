@@ -15,6 +15,7 @@ import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.MessageSource;
+import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -43,6 +44,7 @@ import static org.mockito.Mockito.*;
 /**
  * Integration tests for {@link MailService}.
  */
+@EmbeddedKafka
 @SpringBootTest(classes = KafkaDemoApp.class)
 public class MailServiceIT extends AbstractCassandraTest {
 

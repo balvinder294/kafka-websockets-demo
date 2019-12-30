@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.tekraze.kafka"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "monolith",
+    "baseName": "kafkaDemo",
+    "packageName": "com.tekraze.kafka",
+    "packageFolder": "com/tekraze/kafka",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "cassandra",
+    "devDatabaseType": "cassandra",
+    "prodDatabaseType": "cassandra",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODZmMmUxZTVlYmY1NGY1YTZiOGIzZWM1Y2M4YTc2OGM4YzM1ZTVjMjkwYjI1OWJkYzM5YTI0ZmU3MjRlMWJlNDZmY2JlMGUxM2MxMjZhZTk1Nzc3NGZhOGM2NmYwZjgwNjlkMDIzNGRjMzI0N2QxMmEwN2FiNjhjODQxMWJjZjM=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
